@@ -1,5 +1,4 @@
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup,KeyboardButton
-# from config import list_buttons
 
 
 def start_button():
@@ -8,12 +7,14 @@ def start_button():
 	menu.add(num1)
 	return menu
 
+
 def places(list1):
 	menu = ReplyKeyboardMarkup(resize_keyboard=True)
 	for el in list1:
 		num1 = KeyboardButton(el[1])
 		menu.add(num1)
 	return menu
+
 
 def hours():
 	menu = ReplyKeyboardMarkup(resize_keyboard=True)
@@ -23,12 +24,14 @@ def hours():
 	menu.add(num1).add(num2).add(num3)
 	return menu
 
+
 def comment():
 	menu = ReplyKeyboardMarkup(resize_keyboard=True)
 	num1 = KeyboardButton('Да')
 	num2 = KeyboardButton('Нет')
 	menu.add(num1).add(num2)
 	return menu
+
 
 def save():
 	menu = ReplyKeyboardMarkup(resize_keyboard=True)
@@ -37,11 +40,13 @@ def save():
 	menu.add(num1).add(num2)
 	return menu
 
+
 def start():
 	menu = InlineKeyboardMarkup(resize_keyboard=True)
 	num1 = InlineKeyboardButton( text="Начать", callback_data='start_bot' )
 	menu.add(num1)
 	return menu
+
 
 def admin():
 	menu = ReplyKeyboardMarkup(resize_keyboard=True)
@@ -53,12 +58,14 @@ def admin():
 	menu.add(num1).add(num2).add(num3).add(num4,num5)
 	return menu
 
+
 def search_db():
 	menu = ReplyKeyboardMarkup(resize_keyboard=True)
 	num1 = KeyboardButton('Поиск по фамилии')
 	num2 = KeyboardButton('Поиск по номеру')
 	menu.add(num1).add(num2)
 	return menu
+
 
 def month():
 	menu = ReplyKeyboardMarkup(resize_keyboard=True)
@@ -77,12 +84,14 @@ def month():
 	menu.add(num1,num2,num3).add(num4,num5,num6).add(num7,num8,num9).add(num10,num11,num12)
 	return menu
 
+
 def edit_place(arg):
 	menu = InlineKeyboardMarkup(resize_keyboard=True)
 	num1 = InlineKeyboardButton( text="Изменить", callback_data='edit_place_'+str(arg))
 	num2 = InlineKeyboardButton( text="Удалить", callback_data='delete_place_'+str(arg))
 	menu.add(num1,num2)
 	return menu
+
 
 def select_value():
 	menu = InlineKeyboardMarkup(resize_keyboard=True)
@@ -91,11 +100,13 @@ def select_value():
 	menu.add(num1).add(num2)
 	return menu
 
+
 def new_place():
 	menu = InlineKeyboardMarkup(resize_keyboard=True)
 	num1 = InlineKeyboardButton( text="Добавить новую кнопку", callback_data='new_place')
 	menu.add(num1)
 	return menu
+
 
 def cancel():
 	menu = ReplyKeyboardMarkup(resize_keyboard=True)

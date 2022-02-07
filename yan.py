@@ -3,8 +3,6 @@ import openpyxl
 from datetime import datetime, date, time 
 import calendar
 
-
-
 ident = 'yandex_token'
 secret = 'other_yandex_token'
 TOKEN = 'and_again_other_yandex_token'
@@ -80,7 +78,6 @@ def create_new_table(arg):
 			counter+=1
 			sheet['2'][counter].value = el
 			sheet['1'][counter].value = week[el.weekday()]
-
 
 	book.save(name+'.xlsx')
 	y.upload(name+".xlsx", "/KonturTable/"+name+".xlsx")
